@@ -1,1 +1,107 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susu </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://media1.giphy.com">
+    <link rel="preconnect" href="https://media2.giphy.com">
+    <link rel="preconnect" href="https://media3.giphy.com">
+    <link rel="preconnect" href="https://media4.giphy.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  </head>
+    
+  <body class="min-h-screen flex items-center justify-center p-4 bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80');">
+    <div class="absolute inset-0 bg-black/40"></div>
+    
+   
+    
+    <div class="relative text-center w-full max-w-4xl px-3 py-6 sm:px-4 sm:py-8 md:p-10 bg-white/10 rounded-2xl sm:rounded-3xl backdrop-blur-lg shadow-2xl border border-white/20">
+      <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-['Pacifico'] font-bold mb-6 sm:mb-8 md:mb-12 tracking-wide drop-shadow-lg px-2 flex flex-wrap items-center justify-center gap-2">
+        <span>Babe D Day (Birthday</span>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXhyZDE3OXYxM2tsd3hkcTYxajhnZzk2Nm82MjBwMm42N2Y0cDNncCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IqetbLyD60E1DVJoI7/giphy.gif" class="inline-block w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mx-1 pushing-animation" alt="Pushing">
+        <span>...loading)</span>
+      </h1>
+      <div class="grid grid-cols-2 gap-4 sm:gap-5 md:flex md:gap-6 lg:gap-8 justify-center">
+        <div class="flip-card bg-white/15 rounded-xl sm:rounded-2xl shadow-xl cursor-pointer">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span id="days" class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white drop-shadow-md">00</span>
+              <span class="text-sm sm:text-base md:text-lg text-white/80 uppercase tracking-wider md:tracking-widest mt-2 sm:mt-3 font-semibold">Days</span>
+            </div>
+            <div class="flip-card-back bg-cover bg-center rounded-xl sm:rounded-2xl" style="background-image: url('../images/2.jpeg');"></div>
+          </div>
+        </div>
+        <div class="flip-card bg-white/15 rounded-xl sm:rounded-2xl shadow-xl cursor-pointer">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span id="hours" class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white drop-shadow-md">00</span>
+              <span class="text-sm sm:text-base md:text-lg text-white/80 uppercase tracking-wider md:tracking-widest mt-2 sm:mt-3 font-semibold">Hours</span>
+            </div>
+            <div class="flip-card-back bg-cover bg-center rounded-xl sm:rounded-2xl" style="background-image: url('../images/16.jpeg');"></div>
+          </div>
+        </div>
+        <div class="flip-card bg-white/15 rounded-xl sm:rounded-2xl shadow-xl cursor-pointer">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span id="minutes" class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white drop-shadow-md">00</span>
+              <span class="text-sm sm:text-base md:text-lg text-white/80 uppercase tracking-wider md:tracking-widest mt-2 sm:mt-3 font-semibold">Minutes</span>
+            </div>
+            <div class="flip-card-back bg-cover bg-center rounded-xl sm:rounded-2xl" style="background-image: url('../images/23.jpeg');"></div>
+          </div>
+        </div>
+        <div class="flip-card bg-white/15 rounded-xl sm:rounded-2xl shadow-xl cursor-pointer">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span id="seconds" class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white drop-shadow-md">00</span>
+              <span class="text-sm sm:text-base md:text-lg text-white/80 uppercase tracking-wider md:tracking-widest mt-2 sm:mt-3 font-semibold">Seconds</span>
+            </div>
+            <div class="flip-card-back bg-cover bg-center rounded-xl sm:rounded-2xl" style="background-image: url('../images/1.jpeg');"></div>
+          </div>
+        </div>
+      </div>
+      
+      <button id="exploreBtn" class="mt-6 sm:mt-8 md:mt-12 px-6 sm:px-8 md:px-12 py-3 sm:py-4 bg-white/20 hover:bg-white/30 text-white text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider rounded-full backdrop-blur-sm border-2 border-white/40 shadow-lg transition-all duration-300 hover:scale-105 active:scale-95">
+        Are You Ready?
+      </button>
+    </div>
+    
+    <!-- Walking Man Animation -->
+    <img id="walker" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG9vMnlxcW9oejY2ZXB5bGxjbm1icm43cmE4d3FscHh4NnpqZGZ4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/UDJO29iyTbOfaCbw1q/giphy.gif" class="fixed bottom-0 w-24 sm:w-28 md:w-32 lg:w-40 z-20" alt="Walking man" loading="lazy">
+    
+    <!-- Top Left GIF -->
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGIzMGZ5MGc4bWIyNXFvd3N3bjFiandoM2VnejRxenh4dm54M25kdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/5ullrtbjTwAzDoLkbb/giphy.gif" class="fixed top-4 left-4 w-20 sm:w-24 md:w-28 lg:w-32 z-20 rounded-lg shadow-xl" alt="Top left animation" loading="lazy">
+    
+    <!-- Dancing GIF -->
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmNlMDBpdDJyMThvMHA5bGloNWsyNHU2Y3h6OXg3b3I1OG03cmhpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3HxGUHpqgDrIVmr5Fg/giphy.gif" class="fixed top-4 right-4 w-20 sm:w-24 md:w-28 lg:w-32 z-20 rounded-lg shadow-xl" alt="Dancing animation" loading="lazy">
+    
+    <!-- Left Side Decorative GIF -->
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3IxNXBoanhya2lldm5kYmxvd2o5aWtiZmtvdzRtazN4b3JjOXZxNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/3BammWeZwiBry2h2O8/giphy.gif" class="hidden md:block fixed left-2 top-1/2 -translate-y-1/2 w-24 md:w-32 lg:w-40 xl:w-48 z-10 opacity-80" alt="Left decoration" loading="lazy">
+    
+    <!-- Right Side Decorative GIF -->
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3IxNXBoanhya2lldm5kYmxvd2o5aWtiZmtvdzRtazN4b3JjOXZxNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/3BammWeZwiBry2h2O8/giphy.gif" class="hidden md:block fixed right-2 top-1/2 -translate-y-1/2 w-24 md:w-32 lg:w-40 xl:w-48 z-10 opacity-80" alt="Right decoration" loading="lazy">
+    
+    <!-- Modal for early click -->
+    <div id="teasingModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+      <div class="relative bg-white rounded-3xl p-8 sm:p-12 max-w-md w-full text-center shadow-2xl transform transition-all scale-95 animate-bounce-in">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmplbmJobTE0YWUwdzk4bDN1amhwZWdkbTR3ajk2bWkyamFkdXQxZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/tSh27KXzW9XtrCXXpm/giphy.gif" class="w-24 h-24 mx-auto mb-4 rounded-full" alt="Teasing animation" loading="lazy">
+        <h2 class="text-2xl sm:text-3xl font-['Pacifico'] text-gray-800 mb-4">Ohhhhh Birthday Girl it's Not Yet!</h2>
+        <p class="text-lg text-gray-600 mb-6">You have to be patient! 😜</p>
+        <p class="text-base text-gray-500 mb-8">The countdown is still ticking... Just wait a little longer! 🎂</p>
+        <button id="closeModal" class="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 active:scale-95">
+          Okay, I'll Wait! 😊
+        </button>
+      </div>
+    </div>
+    
+    <script src="./script.js" defer></script>
+  </body>
+  
+</html>
