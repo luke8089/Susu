@@ -1,0 +1,285 @@
+.flip-card {
+  perspective: 1000px;
+  min-height: 160px;
+  width: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 160px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card.auto-flip .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+@media (min-width: 640px) {
+  .flip-card,
+  .flip-card-inner {
+    min-height: 180px;
+  }
+  .flip-card-front, .flip-card-back {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .flip-card,
+  .flip-card-inner {
+    min-height: 200px;
+  }
+  .flip-card-front, .flip-card-back {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .flip-card,
+  .flip-card-inner {
+    min-height: 220px;
+  }
+  .flip-card-front, .flip-card-back {
+    padding: 2.5rem;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.5s ease-out;
+}
+
+.pushing-animation {
+  animation: push-effect 1.5s ease-in-out infinite;
+}
+
+@keyframes push-effect {
+  0%, 100% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(8px) scale(1.1);
+  }
+}
+
+/* Stick Figure Animations */
+.stick-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 30;
+  overflow: hidden;
+}
+
+.stick-figure {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.stick-figure:hover {
+  cursor: grab;
+}
+
+.interactive-stick {
+  pointer-events: all;
+}
+
+.stick-head {
+  width: 15px;
+  height: 15px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.stick-body {
+  width: 3px;
+  height: 25px;
+  background: #fff;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.stick-arm-left,
+.stick-arm-right {
+  width: 3px;
+  height: 20px;
+  background: #fff;
+  position: absolute;
+  top: 20px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.stick-arm-left {
+  left: 8px;
+  transform: rotate(-45deg);
+  animation: wave-left 0.5s infinite alternate;
+}
+
+.stick-arm-right {
+  right: 8px;
+  transform: rotate(45deg);
+  animation: wave-right 0.5s infinite alternate;
+}
+
+.stick-leg-left,
+.stick-leg-right {
+  width: 3px;
+  height: 20px;
+  background: #fff;
+  position: absolute;
+  top: 40px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.stick-leg-left {
+  left: 12px;
+  animation: walk-left 0.4s infinite alternate;
+}
+
+.stick-leg-right {
+  right: 12px;
+  animation: walk-right 0.4s infinite alternate;
+}
+
+/* Stick Figure 1 - Walking across bottom */
+.stick-1 {
+  bottom: 10%;
+  animation: walk-across 15s linear infinite;
+}
+
+/* Stick Figure 2 - Jumping around top */
+.stick-2 {
+  top: 15%;
+  animation: jump-around 12s ease-in-out infinite;
+}
+
+@keyframes walk-across {
+  0% {
+    left: -50px;
+  }
+  100% {
+    left: calc(100% + 50px);
+  }
+}
+
+@keyframes jump-around {
+  0%, 100% {
+    left: -50px;
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    left: 25%;
+    transform: translateY(-30px) rotate(10deg);
+  }
+  50% {
+    left: 50%;
+    transform: translateY(-50px) rotate(-10deg);
+  }
+  75% {
+    left: 75%;
+    transform: translateY(-30px) rotate(10deg);
+  }
+}
+
+@keyframes wave-left {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes wave-right {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes walk-left {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes walk-right {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+/* Walking Man Animation */
+#walker {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#walker.walking {
+  opacity: 1;
+}
+
+#walker.turn-around {
+  transform: scaleX(-1);
+}
